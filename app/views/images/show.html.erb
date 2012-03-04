@@ -1,0 +1,14 @@
+<h1>Image</h1>
+
+<p id="notice"><%= notice %></p>
+        <%= image_tag @image.image.url(:thumb) %>
+        
+        <%= link_to 'Edit', edit_image_path(@image) %> |
+        <%= link_to 'Back', images_path %>
+
+
+<div class="form-actions">
+  <%= link_to 'Back', images_path, :class => 'btn'  %>
+  <%= link_to 'Edit', edit_image_path(@image), :class => 'btn' %>
+  <%= link_to 'Delete', image_path(@image), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+</div>
