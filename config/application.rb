@@ -6,7 +6,7 @@ require "action_controller/railtie"
 require "action_mailer/railtie"
 require "active_resource/railtie"
 require "sprockets/railtie"
-require 'rack/gridfs'
+# require 'rack/gridfs'
 # require "rails/test_unit/railtie"
 
 # Found from stackoverflow http://stackoverflow.com/questions/6420131/rails-cant-find-database-yml
@@ -81,12 +81,12 @@ module Rails3MongoidDevise
 #   config.middleware.insert_after Rack::Runtime, Rack::GridFS,
 #  :prefix => 'uploads', :lookup => :path, :database => "rails3_mongoid_devise_development"
 
-config.autoload_paths += Dir["#{config.root}/lib/**/"] 
+# config.autoload_paths += Dir["#{config.root}/lib/**/"] 
 
 #  New include for middleware
-config.middleware.use "ServeGridfsImage"
-    config.generators.orm = :mongoid
-
-    config.assets.version = '1.0'
+#config.middleware.use "ServeGridfsImage"
+#     config.generators.orm = :mongoid
+#
+#    config.assets.version = '1.0'
   end
 end

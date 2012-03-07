@@ -1,7 +1,7 @@
 Rails3MongoidDevise::Application.routes.draw do
   resources :images
 
-  resources :photos
+#  resources :photos
 
 root :to => "home#index"
 
@@ -9,7 +9,7 @@ root :to => "home#index"
   devise_for :users
   resources :users, :only => :show
           
-match "/images/uploads/*path" => "gridfs#serve"
+# match "/images/uploads/*path" => "gridfs#serve"
 #resources :images
  
  # The priority is based upon order of creation:
